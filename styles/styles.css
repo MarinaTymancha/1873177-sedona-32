@@ -1,0 +1,34 @@
+.main-background {
+    background-color:goldenrod;
+    background-image: url("../img/main-background.jpg");
+    background-repeat: no-repeat;
+    width: 1200px;
+    height: 485px;
+}
+
+.divider {
+    background-image: url("../img/divider.svg");
+    width: 1200px;
+    height: 57px;    
+}
+
+.subscription {
+    color: white;
+    background-color: black;
+    background-image: url("../img/subscribe-background.jpg");    
+    background-repeat: no-repeat;
+    width: 1200px;
+    height: 411px;
+}
+
+.inner-filters {
+    color: white;
+    background-color: black;
+    background-image: url("../img/catalog/inner-filters.jpg");
+    background-repeat: no-repeat;
+    /* width: 1200px;
+    height: 408px; */
+    /* добавила width и height, чтобы изображение было по размеру секции, 
+    но последний fieldset всё равно оказался неохваченным и, наоборот, 
+    ещё и наслоился на следующую секцию почему-то */
+}
