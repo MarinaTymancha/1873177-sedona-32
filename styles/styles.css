@@ -1,34 +1,286 @@
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/ptsans-400.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/ptsans-700.woff2") format("woff2");
+  font-display: swap;
+}
+
+body {
+  font-family: "PT Sans", sans-serif;
+  font-size: 22px;
+  line-height: 26px;
+  color: black;
+  background-color: white;
+}
+
+.button {
+  font-family: inherit;
+  color: black;
+  font-weight: 700;  
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.page-header {
+  color: black;
+  background-color: white;
+}
+
+.navigation-link {
+  font-weight: 700;
+  font-size: 20px;
+  color: black;  
+  text-decoration: none;
+}
+
+.navigation-user-link {
+  font-weight: 700;
+  font-size: 20px;
+  color: black;  
+  text-decoration: none;
+}
+
+.want-there {
+  font-size: 16px;
+  line-height: 21px;  
+  color: white;
+  background-color: #756257;
+}
+
 .main-background {
-    background-color:goldenrod;
-    background-image: url("../img/main-background.jpg");
-    background-repeat: no-repeat;
-    width: 1200px;
-    height: 485px;
+  background-color:goldenrod;
+  background-image: 
+    url("../img/divider.svg"), 
+    url("../img/main-background.jpg");
+  background-repeat: no-repeat;
+  background-position: bottom, center;
+  width: 1200px;
+  height: 485px;
 }
 
-.divider {
-    background-image: url("../img/divider.svg");
-    width: 1200px;
-    height: 57px;    
+.slogan {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-align: center;
+  text-transform: uppercase;
 }
 
-.subscription {
-    color: white;
-    background-color: black;
-    background-image: url("../img/subscribe-background.jpg");    
-    background-repeat: no-repeat;
-    width: 1200px;
-    height: 411px;
+.advantages-title {  
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 36px;
+  text-align: center;  
+}
+
+
+.advantages-heading {
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  text-transform: uppercase;  
+}
+
+.advantages-list p {
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.advantages-white {
+  color: white;
+  background-color: #83B3D3;
+  width: 400px; 
+  height: 384px;
+}
+
+.city-advantages-dwelling, .city-advantages-souvenirs, .size, .tourists {
+  background-color: #83B3D31F;
+  width: 400px; 
+  height: 384px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.city-advantages-food {
+  background-color: white;
+  width: 400px; 
+  height: 384px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.road {
+  background-color: #83B3D333;
+  width: 400px; 
+  height: 384px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.hotel-search {
+  text-align: center;  
+}
+
+.interested {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+  text-transform: uppercase;  
+}
+
+.all-hotels {
+  font-size: 20px;
+  line-height: 36px;  
+  color: white;
+  background-color: #756257;
+}
+
+
+.inner-header-title {
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 78px;
+}
+
+.breadcrumbs {
+  font-size: 16pxdi;
+  line-height: 21px;  
+}
+
+.breadcrumbs-link {
+  color:white;
+  text-decoration: none;
 }
 
 .inner-filters {
-    color: white;
-    background-color: black;
-    background-image: url("../img/catalog/inner-filters.jpg");
-    background-repeat: no-repeat;
-    /* width: 1200px;
-    height: 408px; */
-    /* добавила width и height, чтобы изображение было по размеру секции, 
-    но последний fieldset всё равно оказался неохваченным и, наоборот, 
-    ещё и наслоился на следующую секцию почему-то */
+  color: white;
+  background-color: black;
+  background-image: url("../img/catalog/inner-filters.jpg");
+  background-repeat: no-repeat;    
+  background-size: cover;
+}
+
+.search-filter-title {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 26px;
+}
+
+.search-filter-group label {
+  font-size: 18px;
+  line-height: 23px;
+}
+
+.search-filter-button {
+  font-size: 16px;
+  line-height: 21px;
+  color: white;
+  background-color: #83B3D3;
+}
+
+.reset-button {
+  font-size: 18px;
+  line-height: 23px;
+  color: white;
+  background-color: transparent;
+}
+
+.results {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 39px;
+  text-transform: uppercase;
+}
+
+.hotel-title {
+  color: black;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 31px;
+  text-transform: capitalize;
+  text-decoration: none;
+}
+
+.hotels-list span {
+  font-size: 18px;
+  line-height: 23px;  
+}
+
+.hotels-list .rating {
+  font-size: 16px;
+  line-height: 21px;
+  text-transform: uppercase;
+  background-color: #F2F2F2;
+}
+
+.product-card-button {
+  font-size: 16px;
+  line-height: 21px;  
+  color: white;
+  background-color: #756257;
+}
+
+.favorite-button {
+  font-size: 16px;
+  line-height: 21px;  
+  color: white;
+  background-color: #83B3D3;
+}
+
+.favorite-button-green {
+font-size: 16px;
+  line-height: 21px;  
+  color: white;
+  background-color: #7DB54F;
+}
+
+.subscription {
+  color: white;
+  text-align: center;   
+  background-color: black;
+  background-image: url("../img/subscribe-background.jpg");    
+  background-repeat: no-repeat;
+  width: 1200px;
+  height: 411px;
+}
+
+.inner-subscription {
+  color:black;
+  text-align: center;   
+  background-color: white;    
+  width: 1200px;
+  height: 411px;
+}
+
+.pagination-show-more, .subscribe-button, .pagination-link  {
+  font-size: 20px;
+  line-height: 26px;
+  color: white;
+  background-color: #83B3D3;
+}
+
+.pagination-current {
+  font-size: 20px;
+  line-height: 26px;
+  color: black;
+  background-color: #F2F2F2;
+}
+
+
+.footer-contacts-phone {
+  color: black;
+  font-size: 40px;
+  line-height: 40px;
+  text-decoration: none;
 }
