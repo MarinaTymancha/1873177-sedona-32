@@ -107,7 +107,7 @@ body {
   background-repeat: no-repeat;
   background-position: bottom, center;
   width: 1200px;
-  height: 485px;
+  min-height: 485px;
 }
 
 .general-view {
@@ -235,6 +235,12 @@ body {
   background-image: url("../img/catalog/inner-filters.jpg");
   background-repeat: no-repeat;    
   background-size: cover;
+  padding-left: 71px;
+  padding-right: 72px;
+}
+
+.filters {
+  display: flex;
 }
 
 .search-filter-title {
@@ -276,6 +282,11 @@ body {
   line-height: 31px;
   text-transform: capitalize;
   text-decoration: none;
+}
+
+.hotels-list {
+  display: flex;
+  flex-direction: column;
 }
 
 .hotels-list span {
@@ -321,15 +332,18 @@ font-size: 16px;
   background-image: url("../img/subscribe-background.jpg");    
   background-repeat: no-repeat;
   width: 1200px;
-  height: 411px;
+  min-height: 411px;
 }
 
 .inner-subscription {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   color:#000000;
   text-align: center;   
   background-color: #ffffff;    
   width: 1200px;
-  height: 411px;
+  min-height: 411px;
 }
 
 .pagination-show-more, .subscribe-button, .pagination-link  {
