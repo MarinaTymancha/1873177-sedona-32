@@ -10,26 +10,26 @@
       <nav class="navigation">
         <ul class="navigation-list">
           <li class="navigation-item">
-            <a class="navigation-link" href="index.html">Главная</a>
+            <a class="navigation-link navigation-link-current" href="index.html">Главная</a>
           </li>
           <li class="navigation-item">
-            <a class="navigation-link" href="#">О Седоне</a>
+            <a a class="navigation-link" href="#">О Седоне</a>
           </li>
           <li class="navigation-item">
-            <a class="navigation-link navigation-link-current"></a>Гостиницы</a>
-          </li>
-        </ul>
+            <a a class="navigation-link">Гостиницы</a>
+          </li>          
+        </ul>        
         <a href="index.html">    
           <img class="logo" src="img/header/sedona-logo.svg" width="138" height="70" alt="Логотип сайта.">
-        </a> 
+        </a>       
         <ul class="navigation-user-list">
           <li class="navigation-user-item">
-            <a class="navigation-user-link" href="#">
+            <a class="navigation-user-link navigation-user-link-search" href="#">
               <span class="visually-hidden">Поиск</span>
             </a>
           </li>
           <li class="navigation-user-item">
-            <a class="navigation-user-link" href="#">
+            <a class="navigation-user-link navigation-user-link-favorite" href="#">
               <span class="visually-hidden">Избранное</span>
             </a>
           </li>
@@ -49,9 +49,11 @@
             </h1>
             <ul class="breadcrumbs">
               <li class="breadcrumbs-item">
-                <a class="breadcrumbs-link" href="index.html">
+                <a class="breadcrumbs-link breadcrumbs-link-home" href="index.html">
                   <span class="visually-hidden">Главная страница</span>
                 </a>
+              </li>
+              <li class="breadcrumbs-link breadcrumbs-link-index">
               </li>
               <li class="breadcrumbs-item">
                 <a class="breadcrumbs-link">Гостиницы</a>
@@ -64,7 +66,7 @@
             Фильтры поиска
           </h2>
           <form class="filters" action="https://echo.htmlacademy.ru/" method="post">
-            <fieldset class="search-filter-group">
+            <fieldset class="search-filter-group search-filter-fascilities">
               <legend class="search-filter-title">Инфраструктура:</legend>
               <ul class="facilities-list">
                 <li>
@@ -84,7 +86,7 @@
                 </li>
               </ul>
             </fieldset>    
-            <fieldset class="search-filter-group">
+            <fieldset class="search-filter-group search-filter-dwelling">
               <legend class="search-filter-title">Тип жилья:</legend>
               <ul class="dwelling-types-list">
                 <li>
@@ -104,7 +106,7 @@
                 </li>
               </ul>
             </fieldset>    
-            <fieldset class="search-filter-group">
+            <fieldset class="search-filter-group search-filter-price">
               <legend class="search-filter-title">Стоимость, ₽:</legend>
               <label>
                 <input type="number" name="min-price" value="0">от
@@ -119,46 +121,48 @@
                 <span class="visually-hidden">Изменить максимальную цену.</span>
               </button>                
             </fieldset>
-            <button class="button search-filter-button" type="submit">Применить</button>
-            <button class="reset-button" type="reset">Сбросить</button>
+            <div class="submit-reset">
+              <button class="button search-filter-button" type="submit">Применить</button>
+              <button class="reset-button" type="reset">Сбросить</button>
+            </div>
           </form>          
         </section>
-
+ 
         <section>
           <h2 class="visually-hidden">
             Результаты поиска
           </h2>
-          <p class="results">
-            Найдено гостиниц: 38
-          </p>
-          <div>
+
+          <div class="sorting-container">
+            <p class="results">
+              Найдено гостиниц: 38
+            </p>
             <h3 class="visually-hidden">
               Способ отображения
             </h3>
             <form class="sorting-type" action="https://echo.htmlacademy.ru/" method="post">
-              <label class="visually-hidden">Сортировка по цене
-                <select class="select-control" name="sorting">
-                  <option value="cheap">Сначала дешёвые</option>
-                  <option value="expensive">Сначала дорогие</option>
-                  <option value="popula">Сначала популярные</option>
-                </select>
-              </label>
+              <label class="visually-hidden" for="sorting">Сортировка по цене</label>
+              <select class="select-control" name="sorting" id="sorting">
+                <option value="cheap">Сначала дешёвые</option>
+                <option value="expensive">Сначала дорогие</option>
+                <option value="popula">Сначала популярные</option>
+              </select>              
               <button class="visually-hidden" type="submit">Отсортировать продукты</button>
             </form>
 
-            <ul>
+            <ul class="sorting-display">
               <li>
-                <a href="#">
+                <a class="display-item" href="#">
                   <span class="visually-hidden">Показать карточки</span>
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a class="display-item" href="#">
                   <span class="visually-hidden">Крупные значки</span>
                 </a>
               </li>
               <li>
-                <a href="#" class="active">
+                <a class="display-item" href="#" class="active">
                   <span class="visually-hidden">Показать список</span>
                 </a>
               </li>
@@ -236,47 +240,49 @@
           </ul> 
 
           <button class="button pagination-show-more" type="button">Загрузить ещё</button>
-          <ul class="pagination">
-            <li class="pagination-item">
-              <a class="button pagination-link pagination-current">1</a>
-            </li>
-            <li class="pagination-item">
-              <a class="button pagination-link" href="#">2</a>
-            </li>
-            <li class="pagination-item">
-              <a class="button pagination-link" href="#">3</a>
-            </li>
-            <li class="pagination-item">
-              <a class="button pagination-link" href="#">4</a>
-            </li>
-            <li class="pagination-item">
-              <a class="button pagination-link" href="#">
-                <span class="visually-hidden">Следующая страница</span>...
-              </a>
-            </li>
-            <li class="pagination-item">
-              <a class="button pagination-link" href="#">10</a>
-            </li>
-          </ul>
+          <div class="pagination-container">
+            <ul class="pagination">
+              <li class="pagination-item">
+                <a class="button pagination-link pagination-current">1</a>
+              </li>
+              <li class="pagination-item">
+                <a class="button pagination-link" href="#">2</a>
+              </li>
+              <li class="pagination-item">
+                <a class="button pagination-link" href="#">3</a>
+              </li>
+              <li class="pagination-item">
+                <a class="button pagination-link" href="#">4</a>
+              </li>
+              <li class="pagination-item">
+                <a class="button pagination-link" href="#">
+                  <span class="visually-hidden">Следующая страница</span>...
+                </a>
+              </li>
+              <li class="pagination-item">
+                <a class="button pagination-link" href="#">10</a>
+              </li>
+            </ul>
 
-          <form action="https://echo.htmlacademy.ru/" method="post">
-            <label>Гостиниц на странице:
-              <select name="items-number">            
-                <option value="2">2</option>            
-                <option value="4" selected>4</option>            
-                <option value="6">6</option>
-              </select>
-            </label>
-            <button class="visually-hidden" type="submit">Отсортировать количество</button>
-          </form>
+            <form action="https://echo.htmlacademy.ru/" method="post">
+              <label>Гостиниц на странице:
+                <select name="items-number">            
+                  <option value="2">2</option>            
+                  <option value="4" selected>4</option>            
+                  <option value="6">6</option>
+                </select>
+              </label>
+              <button class="visually-hidden" type="submit">Отсортировать количество</button>
+            </form>
+          </div>
         </section>
 
         <section class="inner-subscription"> 
-          <h2>
+          <h2 class="subscription-heading">
             Подпишитесь на рассылку
           </h2>
           <p>
-            Только полезная информация и никакого спама, честное бойскаутское!
+            Только полезная информация и никакого спама,<br> честное бойскаутское!
           </p>
           <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="post">
             <input type="text" name="user-email" placeholder="Ваш e-mail" >
