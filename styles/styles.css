@@ -18,10 +18,8 @@ html {
   height: 100%;
 }
 
-body {  
-  display: flex;
-  flex-direction: column;
-  min-height: 100%;
+body {    
+  height: 100%;
   margin: 0;
   font-family: "PT Sans", sans-serif;
   font-size: 22px;
@@ -49,6 +47,14 @@ body {
   text-decoration: none;
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  width: 1200px;
+  margin: 0 auto;
+}
+
 .page-header {
   color: #000000;
   background-color: #ffffff;
@@ -56,10 +62,10 @@ body {
 
 .navigation {
   display: flex;
-  width: 1200px;
+  padding-right: 72px;
+  padding-left: 71px;
   outline: 5px solid rgba(255, 99, 78, 0.5);
   outline-offset: -5px;
-  margin: 0 auto;
 }
 
 .navigation-list {
@@ -68,7 +74,7 @@ body {
   align-content: center;  
   width: 450px;  
   margin: 0;
-  padding: 0 0 0 71px;
+  padding: 0;
   list-style-type: none;
   outline: 5px solid rgba(255, 99, 78, 0.5);
   outline-offset: -5px;
@@ -77,8 +83,9 @@ body {
 .navigation-user-list { 
   display: flex;
   flex-wrap: wrap; 
+  justify-content: flex-end;
   align-content: center;
-  width: 300px;  
+  width: 450px;  
   margin: 0;
   padding: 0;
   margin-left: auto;
@@ -125,8 +132,8 @@ body {
 .want-there {
   font-size: 16px;
   line-height: 21px;  
-  height: 21px;
-  width: 94px;
+  min-height: 21px;
+  min-width: 94px;
   padding: 8px 33px;  
   color: #ffffff;  
   background-color: #756257;  
@@ -134,11 +141,6 @@ body {
 
 .main-container {
   flex-grow: 1;
-}
-
-.page-container {
-  width: 1200px;
-  margin: 0 auto;
 }
 
 .main-background {
@@ -161,22 +163,32 @@ body {
 }
 
 .slogan {  
+  width: 720px;
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
   text-align: center;
   text-transform: uppercase;
   margin-top: 63px;
+  margin-left: auto;
+  margin-right: auto;
   outline: 5px solid rgba(255, 99, 78, 0.5);
   outline-offset: -5px;
 }
 
+.advantages {
+  margin-bottom: 91px;
+}
+
 .advantages-title { 
+  width: 720px;
   font-weight: normal;
   font-size: 22px;
   line-height: 36px;
   text-align: center; 
   margin-bottom: 78px;  
+  margin-left: auto;
+  margin-right: auto;
   outline: 5px solid rgba(255, 99, 78, 0.5);
   outline-offset: -5px;
 }
@@ -294,7 +306,7 @@ body {
   flex-direction: column;
   align-items: center;
   text-align: center;  
-  margin-top: 91px;
+  /* margin-top: 91px; */
   margin-bottom: 91px;
 }
 
@@ -311,8 +323,8 @@ body {
   line-height: 36px;   
   color: #ffffff;
   background-color: #756257;  
-  width: 575px;
-  height: 60px;
+  min-width: 575px;
+  min-height: 60px;
   box-sizing: border-box;
   margin-top: 47px;
   padding: 13px 148px 17px 150px; 
@@ -420,8 +432,8 @@ body {
   line-height: 21px;
   color: #ffffff;
   background-color: #83B3D3;
-  width: 160px;
-  height: 48px;
+  min-width: 160px;
+  min-height: 48px;
 }
 
 .reset-button {
@@ -430,8 +442,8 @@ body {
   color: #ffffff;
   background-color: transparent;
   border: none;
-  width: 160px;
-  height: 48px;
+  min-width: 160px;
+  min-height: 48px;
 }
 
 .sorting-container {
@@ -482,7 +494,7 @@ body {
   display: flex;
   flex-direction: column;
   list-style-type: none;
-  margin: 0;
+  margin: 0 0 31px 0;
   padding: 31px 72px 30px 72px;
 }
 
@@ -522,7 +534,7 @@ font-size: 16px;
 .pagination-container {
   display: flex;   
   align-items: center;
-  padding: 9px 72px 0 72px;
+  padding: 0 72px 0 72px;
   outline: 5px solid rgba(255, 99, 78, 0.5);
   outline-offset: -5px;
 }
@@ -531,16 +543,15 @@ font-size: 16px;
   display: flex;
   list-style-type: none;
   padding: 0;
+  margin-top: 31px;
   margin-right: auto;
 }
 
 .pagination-show-more {
   width: 625px;
   height: 55px;
-  margin: 29px 287px 30px 288px;  
+  margin: 0 287px 30px 288px;  
 }
-
-
 
 .pagination-show-more, .subscribe-button, .pagination-link  {
   font-size: 20px;
@@ -615,15 +626,13 @@ font-size: 16px;
 }
 
 .subscribe-button {
-  width: 200px;
-  height: 60px;
+  min-width: 200px;
+  min-height: 60px;
 }
 
 .page-footer-container {
   display: flex;  
-  width: 1200px;  
   align-items: center;
-  margin: 0 auto;
   outline: 5px solid rgba(255, 99, 78, 0.5);
   outline-offset: -5px;
 }
