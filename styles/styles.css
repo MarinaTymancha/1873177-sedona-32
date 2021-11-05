@@ -256,6 +256,7 @@ body {
   margin-left: 10px;
   height: 65px;
   cursor: pointer;
+  outline: none;
 }
 
 .main-container {
@@ -489,32 +490,75 @@ body {
   margin-top: 0;
   margin-bottom: 45px;
   padding: 0;
-  font-size: 16pxdi;
-  line-height: 21px;  
+  font-size: 16px;
+  line-height: 20px;  
   list-style-type: none;  
 }
 
-.breadcrumbs-link {
-  color:#ffffff;
-  text-decoration: none;
-  outline: 5px solid rgba(255, 99, 78, 0.5);
-  outline-offset: -5px;
+.breadcrumbs-item:nth-child(2) { 
+  position: relative; 
+  margin-left: 13px;  
+}
+
+.breadcrumbs-item:nth-child(2)::before {
+  position: absolute;
+  content: url("../img/catalog/index.svg");
+  left: -8px;
+  top: -1px;
+  opacity: 30%;
 }
 
 .breadcrumbs-link-home {
-  display: block;
-  min-width: 21px;
-  min-height: 21px;
-  outline: 5px solid rgba(255, 99, 78, 0.5);
-  outline-offset: -5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 22px;
+  min-height: 21px;  
 }
 
-.breadcrumbs-link-index {
-  min-width: 6px;
-  min-height: 8px;
-  margin-right: 11px;
-  outline: 5px solid rgba(255, 99, 78, 0.5);
-  outline-offset: -5px;
+.breadcrumbs-link-home svg {
+  margin-bottom: 2px;
+}
+
+.breadcrumbs-link-home:hover path {
+  fill: #ffffff99;
+}
+
+.breadcrumbs-link-home:focus {
+  outline: 3px solid #83B3D3;
+  border-radius: 2px;
+}
+
+.breadcrumbs-link-home:active {
+  outline: none;  
+}
+
+.breadcrumbs-link-home:active path {
+  fill: #ffffff4d;
+}
+
+.breadcrumbs-link-current {
+  color:#ffffff;
+  text-decoration: none;  
+  padding: 0 6px 2px 6px;
+}
+
+.breadcrumbs-link-current:hover {
+  color: #ffffff99;
+}
+
+.breadcrumbs-link-current:focus {
+  outline: 3px solid #83B3D3;
+  outline-offset: -2px;
+  border-radius: 2px;  
+}
+
+.breadcrumbs-link-current:active {
+  color: #ffffff4d;
+}
+
+.breadcrumbs-link-current:active {
+  outline: none;  
 }
 
 .inner-filters {
@@ -568,9 +612,7 @@ body {
   display: flex;
   flex-direction: column;
   margin-left: 81px;
-  padding-top: 34px;
-  outline: 5px solid rgba(255, 99, 78, 0.5);
-  outline-offset: -5px;
+  padding-top: 34px;  
 }
 
 .search-filter-button {
@@ -580,24 +622,62 @@ body {
   background-color: #83B3D3;
   min-width: 160px;
   min-height: 48px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.search-filter-button:hover {
+  background-color: #68A2CA;
+}
+
+.search-filter-button:focus {
+  background-color: #68A2CA;
+  outline: 3px solid #FFFFFF;
+}
+
+.search-filter-button:active {
+  background-color: #68A2CA;
+  color: #ffffff4d;
+  outline: none;
 }
 
 .reset-button {
+  align-self: center;
   font-size: 18px;
+  font-weight: 400;  
   line-height: 23px;
+  text-transform: none;
   color: #ffffff;
+  padding-top: 0;
+  padding-bottom: 3px;
   background-color: transparent;
   border: none;
-  min-width: 160px;
-  min-height: 48px;
+  min-width: 94px;
+  min-height: 26px;
+  cursor: pointer;
+}
+
+.reset-button:hover {
+  color:#ffffff99
+}
+
+.reset-button:focus {
+  color:#ffffff;
+  outline: 3px solid #83B3D3;
+  border-radius: 2px;
+}
+
+.reset-button:active {
+  color: #ffffff4d;
+  outline: none;
 }
 
 .sorting-container {
   display: flex;
   align-items: center;
-  padding: 44px 72px 42px 71px;
-  outline: 5px solid rgba(255, 99, 78, 0.5);
-  outline-offset: -5px;
+  padding: 44px 72px 42px 71px;  
 }
 
 .results {
@@ -613,9 +693,7 @@ body {
   min-width: 160px;
   padding-left: 0;
   margin: 0 0 0 auto;
-  list-style: none;
-  outline: 5px solid rgba(255, 99, 78, 0.5);
-  outline-offset: -5px;
+  list-style: none;  
 }
 
 .display-item {
@@ -623,8 +701,38 @@ body {
   width: 48px;
   height: 48px;  
   margin-right: 8px;
-  outline: 5px solid rgba(255, 99, 78, 0.5);
-  outline-offset: -5px;
+  border: 2px solid #E6E6E6;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+  background-size: 16px 14px;
+  background-position: center;  
+}
+
+.display-item:hover {
+  border: 2px solid #83B3D3;
+}
+
+.display-item:focus {
+  border: 2px solid #83B3D3;
+  outline: none;
+}
+
+.display-item:active {
+  border: 2px solid #000000;
+}
+
+.display-item-cards {
+  background-image: url("../img/catalog/view-cards.svg");  
+}
+
+.display-item-slideshow {
+  background-image: url("../img/catalog/view-slideshow.svg");  
+}
+
+.display-item-list {
+  background-image: url("../img/catalog/view-list.svg");
+  border: 2px solid #000000;  
 }
 
 .hotels-list {
@@ -649,11 +757,29 @@ body {
   padding-top: 2px;
 }
 
+.item-image:hover img {
+  opacity: 60%;
+}
+
+.item-image:focus {
+  outline: none;
+}
+
+.item-image:focus img {
+  outline: 3px solid #83B3D3;  
+}
+
+.item-image:active img {
+  opacity: 30%;
+  outline: none;
+}
+
 .item-description {  
   grid-column: 2 / 3;  
 }
 
 .hotel-title {
+  display: flex;
   color: #000000;
   font-size: 24px;
   font-weight: 700;
@@ -662,8 +788,37 @@ body {
   text-decoration: none;
 }
 
+.hotel-title:hover {
+  color: #756257; 
+}
+
+.hotel-title:focus {
+  color: #756257;   
+  outline: none;
+}
+
 .hotel-title h4 {
+  position: relative;
   margin: 0;
+}
+
+.hotel-title:focus h4::before {
+  position: absolute;
+  content: "";
+  border: 3px solid #83B3D3;
+  border-radius: 8px;
+  width: calc(100% + 12px + 12px);
+  height: calc(100% + 7px + 7px);
+  top: -10px;
+  left: -15px;
+}
+
+.hotel-title:active {
+  color: #7562574d;  
+}
+
+.hotel-title:active h4::before {
+  display: none;
 }
 
 .hotel-variant {
@@ -690,7 +845,23 @@ body {
   padding: 9px 32px 8px 31px;
   min-width: 151px;
   min-height: 37px;
+  border-radius: 4px;
   box-sizing: border-box;
+}
+
+.product-card-button:hover {
+  background-color: #615048;
+}
+
+.product-card-button:focus {
+  background-color: #615048;
+  outline: 3px solid #83B3D3;
+}
+
+.product-card-button:active {
+  color: #ffffff4d;
+  background-color: #615048;
+  outline: none;
 }
 
 .item-description p:nth-child(4) {
@@ -711,7 +882,26 @@ body {
   padding: 9px 29px 8px 31px;
   min-width: 160px;
   min-height: 37px;
+  border-radius: 4px;
   box-sizing: border-box;  
+}
+
+.favorite-button:hover {
+  background-color: #68A2CA;
+  outline: 1px solid #756257;
+  outline-offset: -1px;
+}
+
+.favorite-button:focus {
+  background-color: #68A2CA;
+  outline: 3px solid #756257;
+}
+
+.favorite-button:active {
+  background-color: #68A2CA;
+  color: #ffffff4d;
+  outline: 1px solid #756257;
+  outline-offset: -1px;
 }
 
 .favorite-button-green {
@@ -724,7 +914,23 @@ body {
   padding: 9px 27px 8px 29px;
   min-width: 160px;
   min-height: 37px;
+  border-radius: 4px;
   box-sizing: border-box;
+}
+
+.favorite-button-green:hover {
+  background-color: #6C9E42;
+}
+
+.favorite-button-green:focus {
+  background-color: #6C9E42;
+  outline: 3px solid #756257;
+}
+
+.favorite-button-green:active {
+  background-color: #6C9E42;
+  color: #ffffff4d;
+  outline: none;
 }
 
 .item-rating {
@@ -765,9 +971,7 @@ body {
 .pagination-container {
   display: flex;   
   align-items: center;
-  padding: 0 72px 0 72px;
-  outline: 5px solid rgba(255, 99, 78, 0.5);
-  outline-offset: -5px;
+  padding: 0 72px 0 72px;  
 }
 
 .pagination {
@@ -782,6 +986,22 @@ body {
   width: 625px;
   height: 55px;
   margin: 0 287px 30px 288px;  
+  border-radius: 4px;
+}
+
+.pagination-show-more:hover {
+  background-color: #68A2CA;
+}
+
+.pagination-show-more:focus {
+  background-color: #68A2CA;
+  outline: 3px solid #756257;
+}
+
+.pagination-show-more:active {
+  background-color: #68A2CA;
+  color: #ffffff4d;
+  outline: none;
 }
 
 .pagination-show-more, .subscribe-button, .pagination-link  {
@@ -797,16 +1017,17 @@ body {
   margin-right: 7px;
 }
 
+.pagination-item:last-child a {
+  padding: 15px 16px 21px 16px;
+}
+
 .pagination-link {
   display: block;
   box-sizing: border-box;
   width: 55px;
   height: 55px;
   padding: 16px 16px 17px 21px;
-}
-
-.pagination-item:last-child a {
-  padding: 15px 16px 21px 16px;
+  border-radius: 4px;
 }
 
 .pagination-current {
@@ -814,6 +1035,22 @@ body {
   line-height: 26px;
   color: #000000;
   background-color: #F2F2F2;
+  cursor: auto;
+}
+
+.pagination-link:not(.pagination-current):hover {
+  background-color: #68A2CA;
+}
+
+.pagination-link:not(.pagination-current):focus {
+  background-color: #68A2CA;
+  outline: 3px solid #756257;
+}
+
+.pagination-link:not(.pagination-current):active {
+  background-color: #68A2CA;
+  color: #ffffff4d;
+  outline: none;
 }
 
 .subscription {
