@@ -43,8 +43,8 @@
                   <h2 class="popover-title visually-hidden">Список избранных вариантов</h2>
                   <ul class="popover-favorite-list">
                     <li class="popover-favorite-item">
-                      <a class="popover-favorite-link" href="">
-                        <img class="favorite-img" src="img/popover/desert-quail-inn-small.png" width="48" height="48" alt="">
+                      <a class="popover-favorite-link" href="#">
+                        <img class="favorite-img" src="img/popover/desert-quail-inn-small.png" width="48" height="48" alt="Вид на Desert Quail Inn.">
                         <div>
                           <p class="favorite-title">Desert Quail Inn</p>
                           <p class="favorite-description">Мотель</p>  
@@ -61,8 +61,8 @@
                       </button>
                     </li>
                     <li class="popover-favorite-item">
-                      <a class="popover-favorite-link" href="">
-                        <img class="favorite-img" src="img/popover/villas-at-poco-diablo-small.png" width="48" height="48" alt="">
+                      <a class="popover-favorite-link" href="#">
+                        <img class="favorite-img" src="img/popover/villas-at-poco-diablo-small.png" width="48" height="48" alt="Вид на Villas at Poco Diablo.">
                         <div>
                           <p class="favorite-title">Villas at Poco Diablo</p>
                           <p class="favorite-description">Апартаменты</p> 
@@ -84,7 +84,7 @@
               </div>
             </li>
             <li class="navigation-user-item">
-              <a class="button navigation-user-link want-there" href="#">Хочу сюда!</a>
+              <a class="navigation-user-link want-there" href="#">Хочу сюда!</a>
             </li>
           </ul>
         </nav>
@@ -236,11 +236,11 @@
           <h3 class="visually-hidden">Список гостиниц</h3>
           <ul class="hotels-list">
             <li class="hotels-list-item">              
-              <a class="item-image" href="">
-                <img src="img/catalog/hotel-amara-resort.jpg" width="180" height="120" alt="">
+              <a class="item-image" href="#">
+                <img src="img/catalog/hotel-amara-resort.jpg" width="180" height="120" alt="Вид на Amara Resort & Spa.">
               </a>
               <div class="item-description">
-                <a class="hotel-title" href="">
+                <a class="hotel-title" href="#">
                   <h4>Amara Resort & Spa</h4>
                 </a>
                 <p class="hotel-variant">
@@ -258,11 +258,11 @@
               </div>              
             </li>
             <li class="hotels-list-item">              
-              <a class="item-image" href="">
-                <img src="img/catalog/hotel-desert-quail.jpg" width="180" height="120" alt="">
+              <a class="item-image" href="#">
+                <img src="img/catalog/hotel-desert-quail.jpg" width="180" height="120" alt="Вид на Desert Quail Inn.">
               </a>
               <div class="item-description">
-                <a class="hotel-title" href="">
+                <a class="hotel-title" href="#">
                   <h4>Desert Quail Inn</h4>
                 </a>
                 <p class="hotel-variant">
@@ -282,11 +282,11 @@
               </div>              
             </li>
             <li class="hotels-list-item">              
-              <a class="item-image" href="">
-                <img src="img/catalog/hotel-villas-at-poco.jpg" width="180" height="120" alt="">
+              <a class="item-image" href="#">
+                <img src="img/catalog/hotel-villas-at-poco.jpg" width="180" height="120" alt="Вид на Villas at Poco Diablo.">
               </a>
               <div class="item-description">
-                <a class="hotel-title" href="">
+                <a class="hotel-title" href="#">
                   <h4>Villas at Poco Diablo</h4>
                 </a>
                 <p class="hotel-variant">
@@ -306,11 +306,11 @@
               </div>              
             </li>
             <li class="hotels-list-item">              
-              <a class="item-image" href="">
-                <img src="img/catalog/hotel-green-tree.jpg" width="180" height="120" alt="">
+              <a class="item-image" href="#">
+                <img src="img/catalog/hotel-green-tree.jpg" width="180" height="120" alt="Вид на GreenTree Inn.">
               </a>
               <div class="item-description">
-                <a class="hotel-title" href="">
+                <a class="hotel-title" href="#">
                   <h4>GreenTree Inn</h4>
                 </a>
                 <p class="hotel-variant">
@@ -372,7 +372,8 @@
           <h2 class="subscription-heading">Подпишитесь на рассылку</h2>
           <p>Только полезная информация и никакого спама,<br> честное бойскаутское!</p>
           <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="post">
-            <input type="text" name="user-email" placeholder="Ваш e-mail" required>
+            <label class="visually-hidden" for="user-email">Введите e-mail</label>
+            <input type="email" name="user-email" id="user-email" placeholder="Ваш e-mail" required>
             <button class="button subscribe-button" type="submit">Подписаться</button>
           </form>
         </section>
