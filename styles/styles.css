@@ -1763,6 +1763,7 @@ input[type="email"]:not(:placeholder-shown):invalid {
   background-color: #ffffff;
   border: 2px solid #ff5757;
   outline: none;
+}
 
 .subscribe-button {
   min-width: 200px;
